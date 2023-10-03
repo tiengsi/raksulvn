@@ -10,6 +10,7 @@ import { AppService } from './app.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormatNumberPipe } from './pipes/format-number.pipe';
 import { PricePageComponent } from './pages/price-page/price-page.component';
+import { DayOfWeekPipe } from './pipes/day-of-week.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { PricePageComponent } from './pages/price-page/price-page.component';
     OrderPriceComponent,
     FormatNumberPipe,
     PricePageComponent,
+    DayOfWeekPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [AppService],

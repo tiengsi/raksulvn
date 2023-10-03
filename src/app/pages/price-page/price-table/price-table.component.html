@@ -6,7 +6,7 @@
         <th></th>
         <th *ngFor="let col of priceData[0]; index as j">
           <ng-container>
-            <span class="bold first">{{ priceData[0][j].business_day }}</span>
+            <span class="bold first">{{ priceData[0][j].business_day | dayOfWeek}}</span>
           </ng-container>
         </th>
       </tr>
