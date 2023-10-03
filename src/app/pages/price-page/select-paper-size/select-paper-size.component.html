@@ -1,0 +1,11 @@
+<div class="select-paper-size">
+  <div>
+    <p class="title">Select Paper Size</p>
+    <select [(ngModel)]="selectedPaperSize">
+      <option *ngFor="let size of paperSizes" [value]="size">{{ size }}</option>
+    </select>
+  </div>
+  <div class="button">
+    <button (click)="applySelection(selectedPaperSize)">Apply</button>
+  </div>
+</div>

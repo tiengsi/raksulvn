@@ -1,0 +1,28 @@
+<div>
+  <p>Price Table</p>
+  <table>
+    <thead>
+      <tr *ngIf="priceData">
+        <th></th>
+        <th *ngFor="let col of priceData[0]; index as j">
+          <ng-container>
+            <span class="bold first">{{ priceData[0][j].business_day }}</span>
+          </ng-container>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of priceData; index as i">
+        <ng-container *ngIf="isShowMore? true : i <5">
+          <td class="bold first">{{ priceData[i][0].quantity }}</td>
+          <td class="price" [ngClass]="{'active': i === selectedIndex?.currentRow && j === selectedIndex?.currentCol}"
+            *ngFor="let col of priceData[i]; index as j" (click)="selectPrice(i, j)">
+            {{ col.price }}
+          </td>
+        </ng-container>
+      </tr>
+    </tbody>
+  </table>
+  <a *ngIf="!isShowMore" (click)="showMore()">See More</a>
+  <a *ngIf="isShowMore" (click)="showMore()">See Less</a>
+</div>

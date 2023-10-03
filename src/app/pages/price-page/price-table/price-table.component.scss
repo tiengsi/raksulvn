@@ -1,0 +1,68 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  z-index: 3;
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+
+  .price {
+    cursor: pointer;
+  }
+
+  td,
+  th {
+    padding: 10px;
+    position: relative;
+    text-align: center;
+  }
+
+  th,
+  .first {
+    background-color: #fff;
+  }
+
+  td:hover::before {
+    background-color: #d1d1d1;
+    content: '';
+    height: 100%;
+    left: -5000px;
+    position: absolute;
+    top: 0;
+    width: 10000px;
+    z-index: -1;
+  }
+
+
+  td:hover::after {
+    background-color: #d1d1d1;
+    content: '';
+    height: 10000px;
+    left: 0;
+    position: absolute;
+    top: -5000px;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .active {
+    position: relative;
+    background-color: #787474;
+  }
+
+}
+
+a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(22, 22, 246, 0.902);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+button {
+  border: none;
+  background-color: #fff;
+}

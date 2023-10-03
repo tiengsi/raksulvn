@@ -1,0 +1,23 @@
+.select-paper-size {
+  position: relative;
+  min-height: 400px;
+  height: auto;
+
+  select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 1.2em;
+  }
+
+  button {
+    width: 60%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+  }
+
+}

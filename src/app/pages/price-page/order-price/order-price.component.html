@@ -1,0 +1,11 @@
+<div class="order-price" *ngIf="!selectedIndex">
+  Order Price: ¥
+  <button class="btn-cart">Cart</button>
+</div>
+
+<div class="order-price" *ngIf="selectedIndex">
+  Order Price: ¥
+  {{ (priceData?.[selectedIndex.currentRow][selectedIndex.currentCol]?.price *
+  priceData?.[selectedIndex.currentRow][selectedIndex.currentCol]?.quantity) | formatNumber }}
+  <button class="btn-cart" (click)="addToCart()">Cart</button>
+</div>

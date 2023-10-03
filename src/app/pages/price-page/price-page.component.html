@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="cols col-md-4">
+      <!-- Display the SelectPaperSizeComponent -->
+      <app-select-paper-size (selectValue)="getPrice($event);"></app-select-paper-size>
+    </div>
+    <div class="cols col-md-8">
+      <!-- Display the PriceTableComponent -->
+      <app-price-table [priceData]="priceData?.prices" (currentIndex)="currentIndex($event)"></app-price-table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cols col-md-12">
+      <!-- Display the OrderPriceComponent -->
+      <app-order-price [priceData]="priceData?.prices" [selectedIndex]="selectedIndex"></app-order-price>
+    </div>
+  </div>
+</div>
