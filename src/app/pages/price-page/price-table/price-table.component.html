@@ -23,6 +23,11 @@
       </tr>
     </tbody>
   </table>
-  <a *ngIf="!isShowMore" (click)="showMore()">See More</a>
-  <a *ngIf="isShowMore" (click)="showMore()">See Less</a>
+  <ng-container *ngIf="priceData">
+    <a *ngIf="!isShowMore" (click)="showMore()">See More</a>
+    <a *ngIf="isShowMore" (click)="showMore()">See Less</a>
+  </ng-container>
+  <ng-container *ngIf="!priceData">
+    <p> No Data </p>
+  </ng-container>
 </div>

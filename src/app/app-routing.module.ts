@@ -7,10 +7,7 @@ import { PricePageComponent } from './pages/price-page/price-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/price-page', pathMatch: 'full' },
-  { path: 'price-page', component: PricePageComponent },
-  { path: 'select-paper-size', component: SelectPaperSizeComponent },
-  { path: 'price-table', component: PriceTableComponent },
-  { path: 'order-price', component: OrderPriceComponent },
+  { path: 'price-page', component: PricePageComponent }
 ];
 
 @NgModule({

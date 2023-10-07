@@ -9,7 +9,9 @@ table {
   .price {
     cursor: pointer;
   }
-
+  td:hover {
+    background-color: red;
+  }
   td,
   th {
     padding: 10px;
@@ -19,6 +21,10 @@ table {
 
   th,
   .first {
+    background-color: #fff;
+  }
+
+  td.first, td.first:hover:before, td.first:hover:after{
     background-color: #fff;
   }
 
@@ -45,7 +51,9 @@ table {
     z-index: -1;
   }
 
-  .active {
+
+
+  td.active {
     position: relative;
     background-color: #787474;
   }

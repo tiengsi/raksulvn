@@ -24,3 +24,7 @@ export class PricePageService {
     );
   }
 }
+
+export const defaultSize= {
+  size: 'A4'
+};

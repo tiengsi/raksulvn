@@ -15,6 +15,9 @@ export class PriceTableComponent  implements OnChanges{
   constructor() {}
 
   ngOnChanges(changes: SimpleChanges): void {
+    if(!this.priceData) {
+      this.selectedIndex = null;
+    }
     this.currentIndex.emit(this.selectedIndex);
   }
 

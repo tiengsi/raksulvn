@@ -17,7 +17,4 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should have the correct title', () => {
-    expect(app.title).toBe("price table for Raksul's paper printing products");
-  });
 });

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { PricePageService, defaultSize } from '../price-page.service';
 
 @Component({
   selector: 'app-select-paper-size',
@@ -6,15 +7,16 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./select-paper-size.component.scss'],
 })
 export class SelectPaperSizeComponent implements OnInit {
-  selectedPaperSize: string = 'A4'; // Initialize with a default value
+  selectedPaperSize: string =''; // Initialize with a default value
   paperSizes: string[] = ['A4', 'A5', 'B4', 'B5']; // Define your paper sizes here
   priceData: any;
   @Output() selectValue = new EventEmitter<string>();
 
-  constructor() {}
+  constructor( service: PricePageService) {
+  }
 
   ngOnInit() {
-    this.selectValue.emit(this.selectedPaperSize);
+    this.selectedPaperSize =defaultSize.size;
   }
 
   applySelection(price: string) {
